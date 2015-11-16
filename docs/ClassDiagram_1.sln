@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassDiagram_1", "ClassDiagram_1.csproj", "{B5DF1694-3E44-413B-A31C-4FDED1C5C5A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B5DF1694-3E44-413B-A31C-4FDED1C5C5A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5DF1694-3E44-413B-A31C-4FDED1C5C5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5DF1694-3E44-413B-A31C-4FDED1C5C5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5DF1694-3E44-413B-A31C-4FDED1C5C5A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
