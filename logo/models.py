@@ -1,4 +1,5 @@
 from django.db import models
+from organization.models import Organization
 from enum import Enum
 # Create your models here.
 class Logo(models.Model):
@@ -11,47 +12,23 @@ class LogoFile(models.Model):
     """
     File of a logo
     """
-    Logo=models.ForeignKey(Logo)
-    FileName=models.CharField(max_length=200)
-    FileType=models.CharField(max_length=200)
-    FileSize=models.DecimalField()
+    '''
+    Logo=models.ForeignKey(Logo,blank=True,null=True)
+    FileType=models.CharField(max_length=200,null=True)
+    FileSize=models.DecimalField( decimal_places=1, max_digits=5,null=True)
     Height=models.IntegerField()
     Width=models.IntegerField()
     Author=models.CharField(max_length=50)
-    UploadTime=models.DateTimeField(auto_now=True)
-    DownloadFrom=models.CharField(max_length=1000)
+    UploadTime=models.DateTimeField(auto_now=True,null=True)
+    DownloadFrom=models.CharField(max_length=1000,null=True)
+    '''
+    FileName=models.CharField(max_length=100)
+    FilePath=models.FileField(upload_to='media')
 
 
 
 
 
-class Organization(models.Model):
-    """组织"""
-    Name=models.CharField(max_length=100)
-    Type=models.IntegerField()
-    Creator=models.CharField(max_length=200)
-    CreatedTime=models.DateTimeField()
-    Description=models.CharField(max_length=4000)
 
-
-class OrganizationType(Enum):
-    """组织类型"""
-    Enterprise=1  #企业
-    NonProfit=2   #非盈利企业
-    WorkShop=3    #工作室
-    Individual=3 # 个人
-    Goverment=4  #政府
-    Other=99     #其他
-
-
-class IndustryType(models.Model):
-    """行业分类"""
-    Name=models.CharField(max_length=200)
-    Parent=models.ForeignKey("self")
-
-class Organization_IndustryType(models.Model):
-    """组织的 行业类型 多对多"""
-    IndustryType=models.ForeignKey(IndustryType)
-    Organization=models.ForeignKey(Organization)
 
 

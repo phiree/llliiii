@@ -1,0 +1,16 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+{% load%}
+{% block bootstrap3_title %}
+    {% block title %}{% endblock %}
+{% endblock %}
+{%block bootstrap3_content%}
+<div class="container">
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#">LogoHI</a></li>
+  <li role="presentation"><a href="#">欣赏</a></li>
+  <li role="presentation"><a href="#">行业</a></li>
+    <li role="presentation"><a href="#">趣味</a></li>
+</ul>
+    </div>
+    {%block content%}{%endblock%}
+{%endblock%}
